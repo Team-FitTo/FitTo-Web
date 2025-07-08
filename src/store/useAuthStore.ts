@@ -1,6 +1,7 @@
 import React from 'react';
 import { create } from 'zustand';
 import type { AuthUser, LoginCredentials } from '../types/auth';
+import testUserData from '../data/testUser.json';
 
 interface AuthState {
   user: AuthUser | null;
@@ -37,10 +38,11 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   login: async (credentials) => {
     set({ isLoading: true });
     try {
-      // TODO: 실제 API 연동
+      // TODO: 로그인 연동
+      const userFromJson = testUserData as { id: string; username: string; email: string };
       const mockUser: AuthUser = {
-        id: '1',
-        name: '테스트 사용자',
+        id: userFromJson.id,
+        name: userFromJson.username,
         email: credentials.email,
         profileImage: undefined,
         token: 'mock-token-' + Date.now(),

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "3",
+    "name": "엄복동 모임",
+    "description": "박복동, 배복동, 김복동",
+    "workoutType": "자전거",
+    "memberCount": 3,
+    "maxMembers": 8,
+    "createdAt": "2024-05-03T09:00:00Z",
+    "createdBy": "user2",
+    "memberIds": ["user2", "user3", "user4"]
+  },
+  {
+    "id": "4",
+    "name": "헬스 모임",
+    "description": "함께 헬스장에서 운동하는 모임입니다.",
+    "workoutType": "헬스",
+    "memberCount": 3,
+    "maxMembers": 8,
+    "createdAt": "2024-05-04T09:00:00Z",
+    "createdBy": "user2",
+    "memberIds": ["user2", "user3", "user4"]
+  },
+  {
+    "id": "5",
+    "name": "헬스 모임",
+    "description": "함께 헬스장에서 운동하는 모임입니다.",
+    "workoutType": "헬스",
+    "memberCount": 3,
+    "maxMembers": 8,
+    "createdAt": "2024-05-04T09:00:00Z",
+    "createdBy": "user2",
+    "memberIds": ["user2", "user3", "user4"]
+  },
+  {
+    "id": "6",
+    "name": "헬스 모임",
+    "description": "함께 헬스장에서 운동하는 모임입니다.",
+    "workoutType": "헬스",
+    "memberCount": 3,
+    "maxMembers": 8,
+    "createdAt": "2024-05-04T09:00:00Z",
+    "createdBy": "user2",
+    "memberIds": ["user2", "user3", "user4"]
+  },
+  {
+    "id": "7",
+    "name": "헬스 모임",
+    "description": "함께 헬스장에서 운동하는 모임입니다. 함께 헬스장에서 운동하는 모임입니다. 함께 헬스장에서 운동하는 모임입니다.",
+    "workoutType": "헬스",
+    "memberCount": 3,
+    "maxMembers": 8,
+    "createdAt": "2024-05-04T09:00:00Z",
+    "createdBy": "user2",
+    "memberIds": ["user2", "user3", "user4"]
+  }
+] 
