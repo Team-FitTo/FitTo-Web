@@ -9,6 +9,12 @@ interface NavItem {
 
 const BottomNavigation: React.FC = () => {
   const location = useLocation();
+  // 개인적으로 icon은 SVG로 따로 파일로 분리해서 관리하는게 좋다고 생각함
+  // 그래서 아래처럼 SVG 아이콘을 직접 작성하는 것 보단
+  // src/assets/icons/ 폴더에 SVG 파일로 저장하고
+  // import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
+  // 이런식으로 import 해서 사용하는게 좋을 것 같음
+  // 그러면 <HomeIcon className="w-6 h-6" /> 이런식으로 사용 가능
 
   const navItems: NavItem[] = [
     {
@@ -107,7 +113,7 @@ const BottomNavigation: React.FC = () => {
               >
                 {item.icon}
               </div>
-              <span className="text-xs mt-1 font-medium">{item.label}</span>
+              <span className="mt-1 text-xs font-medium">{item.label}</span>
             </Link>
           );
         })}

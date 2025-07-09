@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 여기에 나중에 primry color 같은거 지정하면 좋음 */
+/* @theme {
+  --color-ppink: #ff387f;
+  --color-lpink: #ffe0eb;
+} */

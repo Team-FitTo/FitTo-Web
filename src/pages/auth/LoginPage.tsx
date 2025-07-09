@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/ui/Button';
 import Input from '../../components/ui/Input';
 
+// LoginForm도 있는데 아직 refactoring이 안되어서
+// LoginPage안에서 LoginForm 컴포넌트를 사용하도록 하면 될듯
+
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -41,14 +44,14 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center px-4 py-8">
+    <div className="flex flex-col justify-center min-h-screen px-4 py-8 bg-gray-50">
       <div className="w-full max-w-sm mx-auto">
-        <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">FitTo</h1>
+        <div className="mb-8 text-center">
+          <h1 className="mb-2 text-2xl font-bold text-gray-900">FitTo</h1>
           <p className="text-sm text-gray-600">함께 운동하는 즐거움</p>
         </div>
 
-        <div className="bg-white py-6 px-4 shadow-sm rounded-lg">
+        <div className="px-4 py-6 bg-white rounded-lg shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
               type="email"
@@ -84,7 +87,7 @@ const LoginPage: React.FC = () => {
                 <div className="w-full border-t border-gray-300" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">또는</span>
+                <span className="px-2 text-gray-500 bg-white">또는</span>
               </div>
             </div>
 
@@ -96,23 +99,23 @@ const LoginPage: React.FC = () => {
                 onClick={handleKakaoLogin}
               >
                 <div className="flex items-center justify-center">
-                  <span className="text-yellow-500 mr-2">카카오</span>
+                  <span className="mr-2 text-yellow-500">카카오</span>
                   로그인
                 </div>
               </Button>
             </div>
           </div>
 
-          <div className="mt-6 text-center space-y-2">
+          <div className="mt-6 space-y-2 text-center">
             <Link
               to="/signup"
-              className="block text-blue-600 hover:text-blue-500 text-sm"
+              className="block text-sm text-blue-600 hover:text-blue-500"
             >
               회원가입
             </Link>
             <Link
               to="/forgot-password"
-              className="block text-blue-600 hover:text-blue-500 text-sm"
+              className="block text-sm text-blue-600 hover:text-blue-500"
             >
               비밀번호 찾기
             </Link>

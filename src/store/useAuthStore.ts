@@ -2,11 +2,25 @@ import React from 'react';
 import { create } from 'zustand';
 import type { AuthUser, LoginCredentials } from '../types/auth';
 
+// 웹에서만사용하면 쿠키방식이 추천되드라고
+// https://youtube.com/shorts/EnetEaN1h3M?feature=shared 이거봤는데
+// 댓글이랑 정리해보면
+// Next.js과 같은 SSR 프레임워크에서는 쿠키 기반 인증이 더 안전하고 효율적이고
+// 형이 지금 하는 CSR 방식의 React 앱에서는
+// 로컬 스토리지에 액세스 토큰, 쿠키에 Refresh 토큰을 저장하는 방식이 추천하더라고
+// 그리고 형처럼 전역 상태 관리 라이브러리(Zustand, Redux 등)를 사용해서
+// 인증 상태를 관리하는 것도 보안상 좋다고 하네
+// ssr 이랑 csr 차이점은 나도 공부해야함
+
+// 아래 코드 야무지네
+
 interface AuthState {
   user: AuthUser | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  login: (credentials: LoginCredentials) => Promise<{ success: boolean; error?: string }>;
+  login: (
+    credentials: LoginCredentials
+  ) => Promise<{ success: boolean; error?: string }>;
   loginWithKakao: () => Promise<{ success: boolean; error?: string }>;
   logout: () => void;
   updateUser: (updates: Partial<AuthUser>) => void;
@@ -34,7 +48,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     }
   },
 
-  login: async (credentials) => {
+  login: async credentials => {
     set({ isLoading: true });
     try {
       // TODO: 실제 API 연동
@@ -79,7 +93,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     set({ user: null, isAuthenticated: false, isLoading: false });
   },
 
-  updateUser: (updates) => {
+  updateUser: updates => {
     const user = get().user;
     if (user) {
       const updatedUser = { ...user, ...updates };
@@ -95,4 +109,4 @@ export const useAuthRestore = () => {
   React.useEffect(() => {
     restore();
   }, [restore]);
-}; 
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../../store/useAuthStore';
 
@@ -19,6 +19,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const navigate = useNavigate();
   const { user, logout } = useAuthStore();
+  const [isClickedProfile, setIsClickedProfile] = useState(false);
 
   const handleBack = () => {
     if (onBack) {
@@ -28,13 +29,18 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
 
+  const handleClickProfile = () => {
+    setIsClickedProfile(!isClickedProfile);
+    console.log('프로필 클릭됨');
+  };
+
   const handleLogout = () => {
     logout();
     navigate('/login');
   };
 
   return (
-    <header className="bg-brand-bg shadow-sm border-b sticky top-0 z-10">
+    <header className="sticky top-0 z-10 border-b shadow-sm bg-brand-bg">
       <div className="px-4 py-4">
         <div className="flex items-center justify-between">
           {/* 왼쪽 영역 */}
@@ -66,27 +72,30 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center space-x-2">
             {rightAction}
             {showProfile && user && (
-              <div className="relative">
-                <button className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm font-medium">
+              <div onClick={handleClickProfile} className="relative">
+                <button className="flex items-center p-2 space-x-2 rounded-lg hover:bg-gray-100">
+                  <div className="flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full">
+                    <span className="text-sm font-medium text-white">
                       {user.name.charAt(0)}
                     </span>
                   </div>
-                  <span className="text-sm text-gray-700 hidden sm:block">
+                  <span className="hidden text-sm text-gray-700 sm:block">
                     {user.name}
                   </span>
                 </button>
 
                 {/* 드롭다운 메뉴 */}
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1">
-                  <button
-                    onClick={handleLogout}
-                    className="w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    로그아웃
-                  </button>
-                </div>
+                {/* 상태 관리 추가해봤음 */}
+                {isClickedProfile && (
+                  <div className="absolute right-0 w-48 py-1 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
+                    <button
+                      onClick={handleLogout}
+                      className="w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100"
+                    >
+                      로그아웃
+                    </button>
+                  </div>
+                )}
               </div>
             )}
           </div>

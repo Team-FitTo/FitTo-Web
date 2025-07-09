@@ -8,6 +8,9 @@ interface AppRoutesProps {
   isAuthenticated: boolean;
 }
 
+// 라우팅 구조는 좋은데 , not-found 페이지가 없어서
+// 404 페이지를 추가하는게 좋을 것 같음
+
 const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
   const navigate = useNavigate();
   return (
@@ -18,7 +21,12 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
           isAuthenticated ? (
             <Navigate to="/" replace />
           ) : (
-            <div className="min-h-screen bg-brand-bg flex flex-col justify-center px-4 py-8">
+            // 이부분이 로그인 페이지 인데 <LoginForm /> 컴포넌트가 그대로 있는 것 보단
+            // 페이지 파일을 따로 만들어서
+            // 라우팅 구조를 좀 더 명확하게 하는게 좋을 것 같음
+            // 예를 들어 src/pages/auth/LoginPage.tsx 같은 파일을 만들어서
+
+            <div className="flex flex-col justify-center min-h-screen px-4 py-8 bg-brand-bg">
               <LoginForm
                 onSuccess={() => {
                   navigate('/');
@@ -124,6 +132,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
         }
       />
 
+      {/* 지금 이게 404 처리가 된건가 잘 모르겟네 이 라우팅은 오랜만이라 */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

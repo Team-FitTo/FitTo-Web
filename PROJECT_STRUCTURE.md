@@ -2,6 +2,8 @@
 
 ## 📁 디렉토리 구조
 
+<!-- TanstackQuery 추가 했으면 좋겠음  -->
+
 ```
 fitto-web/
 ├── src/
@@ -52,12 +54,15 @@ fitto-web/
 ### 📦 컴포넌트 (components/)
 
 #### UI 컴포넌트 (ui/)
+
 - **Button.tsx**: 재사용 가능한 버튼 컴포넌트
+
   - variant: primary, secondary, outline, ghost
   - size: sm, md, lg
   - onClick, disabled 등 props 지원
 
 - **Input.tsx**: 재사용 가능한 입력 컴포넌트
+
   - type: text, email, password, number
   - label, error, disabled 등 props 지원
 
@@ -68,12 +73,14 @@ fitto-web/
 ### 📄 페이지 (pages/)
 
 #### 인증 페이지 (auth/)
+
 - **LoginPage.tsx**: 로그인 화면
   - 이메일/비밀번호 로그인
   - 카카오 로그인 버튼
   - 회원가입/비밀번호 찾기 링크
 
 #### 홈 페이지 (home/)
+
 - **HomePage.tsx**: 모임 리스트 화면
   - 내가 가입한 모임 목록
   - 모임 생성 버튼
@@ -89,6 +96,7 @@ fitto-web/
 ### ⚙️ 설정 파일
 
 - **tailwind.config.js**: Tailwind CSS 설정
+
   - content: 스캔할 파일 경로
   - theme: 커스텀 테마 설정
   - plugins: 추가 플러그인
@@ -99,22 +107,26 @@ fitto-web/
 ## 🚀 다음 단계
 
 ### 1. 모임 관련 페이지 추가
+
 - 모임 상세 화면
 - 구성원 상태 확인
 - 달력 (공유 달력)
 - 챌린지 설정/진행
 
 ### 2. 상태 관리 추가
+
 - React Context 또는 Redux Toolkit
 - 인증 상태 관리
 - 모임 데이터 관리
 
 ### 3. API 연동
+
 - 백엔드 API 연동
 - 인증 토큰 관리
 - 데이터 페칭 로직
 
 ### 4. 추가 기능
+
 - 실시간 타이머
 - 푸시 알림
 - 이미지 업로드
@@ -123,25 +135,27 @@ fitto-web/
 ## 💡 개발 팁
 
 1. **Tailwind CSS 사용법**:
+
    ```jsx
    // 기본 클래스
    <div className="bg-blue-500 text-white p-4 rounded-lg">
-   
+
    // 반응형 디자인
    <div className="w-full md:w-1/2 lg:w-1/3">
-   
+
    // 상태별 스타일
    <button className="bg-blue-500 hover:bg-blue-600 disabled:opacity-50">
    ```
 
 2. **TypeScript 타입 활용**:
+
    ```tsx
    // Props 타입 정의
    interface ButtonProps {
      variant?: 'primary' | 'secondary';
      children: React.ReactNode;
    }
-   
+
    // 컴포넌트에서 사용
    const Button: React.FC<ButtonProps> = ({ variant, children }) => {
      // ...
@@ -157,4 +171,4 @@ fitto-web/
      <Route path="calendar" element={<Calendar />} />
      <Route path="challenge" element={<Challenge />} />
    </Route>
-   
+   ```
