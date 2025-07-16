@@ -8,7 +8,8 @@
     "maxMembers": 8,
     "createdAt": "2024-05-03T09:00:00Z",
     "createdBy": "user2",
-    "memberIds": ["user2", "user3", "user4"]
+    "memberIds": ["user2", "user3", "user4"],
+    "isActive": true
   },
   {
     "id": "4",
@@ -19,7 +20,8 @@
     "maxMembers": 8,
     "createdAt": "2024-05-04T09:00:00Z",
     "createdBy": "user2",
-    "memberIds": ["user2", "user3", "user4"]
+    "memberIds": ["user2", "user3", "user4"],
+    "isActive": true
   },
   {
     "id": "5",
@@ -30,7 +32,8 @@
     "maxMembers": 8,
     "createdAt": "2024-05-04T09:00:00Z",
     "createdBy": "user2",
-    "memberIds": ["user2", "user3", "user4"]
+    "memberIds": ["user2", "user3", "user4"],
+    "isActive": false
   },
   {
     "id": "6",
@@ -41,7 +44,8 @@
     "maxMembers": 8,
     "createdAt": "2024-05-04T09:00:00Z",
     "createdBy": "user2",
-    "memberIds": ["user2", "user3", "user4"]
+    "memberIds": ["user2", "user3", "user4"],
+    "isActive": true
   },
   {
     "id": "7",
@@ -52,6 +56,7 @@
     "maxMembers": 8,
     "createdAt": "2024-05-04T09:00:00Z",
     "createdBy": "user2",
-    "memberIds": ["user2", "user3", "user4"]
+    "memberIds": ["user2", "user3", "user4"],
+    "isActive": false
   }
 ] 

@@ -10,6 +10,7 @@ export interface Meeting {
   createdAt: Date;
   createdBy: string;
   memberIds: string[];
+  isActive: boolean;
 }
 
 export interface MeetingDetail extends Omit<Meeting, 'memberIds'> {

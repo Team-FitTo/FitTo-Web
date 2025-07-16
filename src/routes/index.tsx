@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import LoginForm from '../components/forms/LoginForm';
-import HomePage from '../pages/home/HomePage';
+import HomePage from '../pages/home';
 import PageLayout from '../components/layout/PageLayout';
 
 interface AppRoutesProps {
