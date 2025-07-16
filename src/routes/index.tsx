@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-import LoginForm from '../components/forms/LoginForm';
+import LoginPage from '../pages/login';
 import HomePage from '../pages/home';
 import PageLayout from '../components/layout/PageLayout';
 
@@ -18,16 +18,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
           isAuthenticated ? (
             <Navigate to="/" replace />
           ) : (
-            <div className="min-h-screen bg-brand-bg flex flex-col justify-center px-4 py-8">
-              <LoginForm
-                onSuccess={() => {
-                  navigate('/');
-                }}
-                onError={error => {
-                  console.error('Login error:', error);
-                }}
-              />
-            </div>
+            <LoginPage onSuccess={() => navigate('/')} />
           )
         }
       />
