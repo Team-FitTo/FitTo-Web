@@ -8,7 +8,8 @@
     "maxMembers": 10,
     "createdAt": "2024-05-01T09:00:00Z",
     "createdBy": "user1",
-    "memberIds": ["user1", "user2", "user3", "user4", "user5"]
+    "memberIds": ["user1", "user2", "user3", "user4", "user5"],
+    "isActive": false
   },
   {
     "id": "2",
@@ -19,7 +20,8 @@
     "maxMembers": 8,
     "createdAt": "2024-05-02T09:00:00Z",
     "createdBy": "user2",
-    "memberIds": ["user1", "user2", "user3"]
+    "memberIds": ["user1", "user2", "user3"],
+    "isActive": false
   },
   {
     "id": "8",
@@ -30,6 +32,7 @@
     "maxMembers": 8,
     "createdAt": "2024-05-03T09:00:00Z",
     "createdBy": "user2",
-    "memberIds": ["user1", "user2", "user3"]
+    "memberIds": ["user1", "user2", "user3"],
+    "isActive": true
   }
 ] 
