@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../ui/Button';
-import Input from '../ui/Input';
-import { useAuthStore } from '../../store/useAuthStore';
+import Button from '../../../components/ui/Button';
+import Input from '../../../components/ui/Input';
+import { useAuthStore } from '../../../store/useAuthStore';
 
 interface LoginFormProps {
   onSuccess?: () => void;
