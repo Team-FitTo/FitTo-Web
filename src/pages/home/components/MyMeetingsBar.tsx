@@ -10,7 +10,7 @@ interface MyMeetingsBarProps {
 }
 
 const MyMeetingsBar: React.FC<MyMeetingsBarProps> = ({ meetings, onAddMeeting, onMeetingClick }) => (
-  <div className="w-full max-w-[400px] mx-auto flex gap-4 justify-start mb-6 items-center">
+  <div className="w-full max-w-[400px] mx-auto flex gap-4 justify-start items-center">
     {/* vector(추가) 버튼 */}
     <button className="flex flex-col items-center focus:outline-none" onClick={onAddMeeting}>
       <span className="w-[50px] h-[50px] flex items-center justify-center rounded-full">

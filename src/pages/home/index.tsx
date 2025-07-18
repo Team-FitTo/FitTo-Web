@@ -24,11 +24,11 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-bg flex flex-col items-center pt-6 px-[30px]">
+    <div className="min-h-screen bg-brand-bg flex flex-col items-center pt-[78px] px-[35px]">
       {/* 상단 내 미팅 버튼 영역 */}
       <MyMeetingsBar meetings={myMeetings} onAddMeeting={() => {}} onMeetingClick={handleMeetingClick} />
       {/* 카드 컨테이너 */}
-      <div className="max-w-[400px] mx-auto bg-white rounded-t-[54px] px-6 pt-6 pb-0 flex-1 flex flex-col shadow-lg">
+      <div className="w-full bg-white rounded-t-[54px] px-6 pt-6 pb-6 mt-[40px] flex-1 flex flex-col shadow-lg">
         {/* 필터 버튼 */}
         <FilterButton onClick={() => {}} />
         {/* 내가 들어가있지 않은 미팅 리스트 */}
