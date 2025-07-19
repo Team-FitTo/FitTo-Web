@@ -1,10 +1,10 @@
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
 /* Tailwind CSS directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'swiper/css';
-@import 'swiper/css/pagination';
 
 body {
   -ms-overflow-style: none; /* IE, Edge */

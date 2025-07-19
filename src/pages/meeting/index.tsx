@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import MeetingTimer from './components/MeetingTimer';
 import MemberListPage from './MemberListPage';
 import CalendarPage from './CalendarPage';
+import ChallengePage from './ChallengePage';
+import RankingPage from './RankingPage';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -44,6 +46,16 @@ const MeetingPage: React.FC = () => {
           <SwiperSlide>
             <div className="w-full h-full flex items-center justify-center">
               <CalendarPage />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-full h-full flex items-center justify-center">
+              <ChallengePage />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-full h-full flex items-center justify-center">
+              <RankingPage />
             </div>
           </SwiperSlide>
         </Swiper>
