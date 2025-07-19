@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const lineClamp = require('@tailwindcss/line-clamp');
+const scrollerHide = require('tailwind-scrollbar-hide');
 
 export default {
   content: [
@@ -25,6 +26,11 @@ export default {
           active: '#A78BFA', // 온라인
           inactive: '#B7B7B7', // 오프라인
         },
+        // 텍스트 색상
+        text: {
+          basic: '#111827', // 기본
+          basic2: '#6B7280', // 연한
+        },
       },
       // 커스텀 폰트
       fontFamily: {
@@ -40,6 +46,7 @@ export default {
   },
   plugins: [
     lineClamp,
+    scrollerHide,
   ],
 }
 

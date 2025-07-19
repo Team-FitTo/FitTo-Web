@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ children, className = '', onClick }) => {
-  const baseClasses = 'bg-brand-bg2 rounded-2xl shadow border border-gray-200';
+  const baseClasses = 'bg-brand-bg2 rounded-2xl border border-gray-200';
   const clickableClasses = onClick
     ? 'cursor-pointer hover:shadow-lg transition-shadow'
     : '';
