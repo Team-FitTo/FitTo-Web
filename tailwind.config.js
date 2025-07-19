@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const lineClamp = require('@tailwindcss/line-clamp');
+const scrollerHide = require('tailwind-scrollbar-hide');
 
 export default {
   content: [
@@ -45,6 +46,7 @@ export default {
   },
   plugins: [
     lineClamp,
+    scrollerHide,
   ],
 }
 

@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-bg flex flex-col items-center pt-[78px] px-[35px]">
+    <div className="min-h-screen bg-brand-bg flex flex-col items-center pt-[68px] px-[35px]">
       {/* 상단 내 미팅 버튼 영역 */}
       <MyMeetingsBar meetings={myMeetings} onAddMeeting={() => {}} onMeetingClick={handleMeetingClick} />
       {/* 카드 컨테이너 */}
