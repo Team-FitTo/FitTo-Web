@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import MeetingTimer from './components/MeetingTimer';
-
-// 스와이퍼 페이지 placeholder 컴포넌트
-const MemberListPage = () => <div>모임 구성원 화면</div>;
+import MemberListPage from './MemberListPage';
+import CalendarPage from './CalendarPage';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const MeetingPage: React.FC = () => {
   // 예시용 상태 (타이머, 목표시간, 재생여부)
@@ -26,8 +29,24 @@ const MeetingPage: React.FC = () => {
       />
       {/* 중앙 네모난 스와이퍼 컨테이너 */}
       <div className="w-full bg-white rounded-[54px] pt-6 pb-6 mt-[42px] flex-1 flex flex-col shadow-lg min-h-[420px] justify-center items-center">
-        {/* TODO: 스와이퍼로 교체, 현재는 첫번째 페이지만 렌더 */}
-        <MemberListPage />
+        <Swiper
+          className="w-full h-full"
+          spaceBetween={20}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+        >
+          <SwiperSlide>
+            <div className="w-full h-full flex items-center justify-center">
+              <MemberListPage />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-full h-full flex items-center justify-center">
+              <CalendarPage />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

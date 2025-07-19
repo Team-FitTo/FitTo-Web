@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
 body {
   -ms-overflow-style: none; /* IE, Edge */
   scrollbar-width: none;    /* Firefox */
@@ -17,4 +20,13 @@ html {
 }
 html::-webkit-scrollbar {
   display: none;
+}
+
+/* Swiper 페이지네이션(인디케이터) 색상 커스텀 */
+.swiper-pagination-bullet {
+  background: #e0e0e0 !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #7B61FF !important;
 }
