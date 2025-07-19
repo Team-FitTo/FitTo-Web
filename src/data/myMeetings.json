@@ -58,5 +58,29 @@
     "createdBy": "user2",
     "memberIds": ["user1", "user2", "user3"],
     "isActive": true
+  },
+  {
+    "id": "10",
+    "name": "자전거 모임",
+    "description": "함께 자전거를 타는 모임입니다.",
+    "workoutType": "자전거",
+    "memberCount": 3,
+    "maxMembers": 8,
+    "createdAt": "2024-05-03T09:00:00Z",
+    "createdBy": "user2",
+    "memberIds": ["user1", "user2", "user3"],
+    "isActive": true
+  },
+  {
+    "id": "10",
+    "name": "자전거 모임",
+    "description": "함께 자전거를 타는 모임입니다.",
+    "workoutType": "자전거",
+    "memberCount": 3,
+    "maxMembers": 8,
+    "createdAt": "2024-05-03T09:00:00Z",
+    "createdBy": "user2",
+    "memberIds": ["user1", "user2", "user3"],
+    "isActive": true
   }
 ] 
