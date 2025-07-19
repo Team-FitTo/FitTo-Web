@@ -21,11 +21,11 @@ const MeetingCircleButton: React.FC<MeetingCircleButtonProps> = ({
   const borderColor = isActive ? 'border-brand-main' : 'border-status-inactive';
   const outerClass =
     variant === 'my'
-      ? `w-[50px] h-[50px] border-[3px]`
+      ? `w-[55px] h-[55px] border-[3px]`
       : `w-[33px] h-[33px] border-[3px]`;
   const iconClass =
     variant === 'my'
-      ? 'w-[33px] h-[33px]'
+      ? 'w-[35px] h-[35px]'
       : 'w-[20px] h-[20px]';
 
   let icon = null;
@@ -36,7 +36,7 @@ const MeetingCircleButton: React.FC<MeetingCircleButtonProps> = ({
   return (
     <button
       type="button"
-      className={`flex items-center justify-center rounded-full bg-white ${outerClass} ${borderColor} focus:outline-none ${className}`}
+      className={`flex items-center justify-center rounded-full mx-[10px] bg-white ${outerClass} ${borderColor} focus:outline-none ${className}`}
       onClick={onClick}
     >
       {icon}

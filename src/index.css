@@ -2,3 +2,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+body {
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari, Opera */
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Swiper 페이지네이션(인디케이터) 색상 커스텀 */
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: #ffffff !important;
+  opacity: 1 !important;
+  border: 1px solid #7B61FF !important; 
+  box-sizing: border-box;
+}
+.swiper-pagination-bullet-active {
+  width: 12px !important;
+  height: 12px !important;
+  background: #7B61FF !important;
+}

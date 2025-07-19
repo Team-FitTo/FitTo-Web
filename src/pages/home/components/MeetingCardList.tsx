@@ -7,7 +7,7 @@ interface MeetingCardListProps {
 }
 
 const MeetingCardList: React.FC<MeetingCardListProps> = ({ meetings }) => (
-  <div className="space-y-5">
+  <div className="space-y-5 px-2">
     {meetings.map(meeting => (
       <MeetingCard key={meeting.id} meeting={meeting} />
     ))}
