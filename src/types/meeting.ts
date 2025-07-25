@@ -1,30 +1,28 @@
-import type { UserProfile } from './user';
+import type { Member } from './user';
 
 export interface Meeting {
   id: string;
   name: string;
-  description?: string;
   workoutType: string;
+  description?: string;
+  maxMembers: number;
   memberCount: number;
-  maxMembers?: number;
-  createdAt: Date;
-  createdBy: string;
-  memberIds: string[];
-  isActive: boolean;
+  isWorkingOut: boolean;
+  createdAt: string;
 }
 
-export interface MeetingDetail extends Omit<Meeting, 'memberIds'> {
-  members: UserProfile[];
-  todayGoalTime: number;
-  isActive: boolean;
+export interface MeetingDetail {
+  members: Member[];
+  todayWorkoutTime: number;
+  isWorkingOut: boolean;
 }
 
 export interface WorkoutRecord {
   id: string;
   userId: string;
-  meetingId: string;
-  date: string;
-  duration: number;
-  startTime?: Date;
-  endTime?: Date;
+  workoutType: string;
+  workoutTime: number;
+  recorded_at: Date;
+  startTime: Date;
+  endTime: Date;
 }
