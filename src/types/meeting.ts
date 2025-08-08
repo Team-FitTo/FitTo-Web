@@ -13,9 +13,15 @@ export interface Meeting {
 
 export interface MeetingDetail {
   id: string;
+  name: string;
+  workoutType: string;
+  description?: string;
+  maxMembers: number;
+  memberCount: number;
+  isWorkingOut: boolean;
+  createdAt: Date;
   members: Member[];
   todayWorkoutTime: number;
-  isWorkingOut: boolean;
 }
 
 export interface WorkoutRecord {
@@ -26,4 +32,11 @@ export interface WorkoutRecord {
   recorded_at: Date;
   startTime: Date;
   endTime: Date;
+}
+
+export interface MeetingMember {
+  memberId: string;
+  nickname: string;
+  todayWorkoutTime: number;
+  isWorkingOut: boolean;
 }
