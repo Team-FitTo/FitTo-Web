@@ -8,10 +8,11 @@ export interface Meeting {
   maxMembers: number;
   memberCount: number;
   isWorkingOut: boolean;
-  createdAt: string;
+  createdAt: Date;
 }
 
 export interface MeetingDetail {
+  id: string;
   members: Member[];
   todayWorkoutTime: number;
   isWorkingOut: boolean;

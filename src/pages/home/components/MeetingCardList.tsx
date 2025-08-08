@@ -4,12 +4,13 @@ import MeetingCard from './MeetingCard';
 
 interface MeetingCardListProps {
   meetings: Meeting[];
+  onMeetingClick: (meeting: Meeting) => void;
 }
 
-const MeetingCardList: React.FC<MeetingCardListProps> = ({ meetings }) => (
+const MeetingCardList: React.FC<MeetingCardListProps> = ({ meetings, onMeetingClick }) => (
   <div className="space-y-5 px-2">
     {meetings.map(meeting => (
-      <MeetingCard key={meeting.id} meeting={meeting} />
+      <MeetingCard key={meeting.id} meeting={meeting} onMeetingClick={onMeetingClick} />
     ))}
   </div>
 );

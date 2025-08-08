@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Card from '../../../components/ui/Card';
 import MeetingCircleButton from './MeetingCircleButton';
 import type { Meeting } from '../../../types/meeting';
 
 interface MeetingCardProps {
   meeting: Meeting;
+  onMeetingClick: (meeting: Meeting) => void;
 }
 
-const MeetingCard: React.FC<MeetingCardProps> = ({ meeting }) => (
+const MeetingCard: React.FC<MeetingCardProps> = ({ meeting, onMeetingClick }) => (
   <Card className="px-4 py-2 bg-brand-bg2 rounded-[21px] flex items-center justify-between">
     <div className="flex-1 min-w-0">
       <div className="flex items-center justify-between mb-1">
@@ -20,12 +20,15 @@ const MeetingCard: React.FC<MeetingCardProps> = ({ meeting }) => (
     <div className="flex flex-col items-center flex-shrink-0 ml-4">
       <MeetingCircleButton
         workoutType={meeting.workoutType as '조깅' | '자전거' | '헬스'}
-        isActive={meeting.isActive}
+        isWorkingOut={meeting.isWorkingOut}
         variant="other"
       />
-      <Link to={`/meeting/${meeting.id}`} className="text-brand-main font-semibold text-sm mt-2 whitespace-nowrap">
+      <button 
+        onClick={() => onMeetingClick(meeting)} 
+        className="text-brand-main font-semibold text-sm mt-2 whitespace-nowrap hover:underline"
+      >
         입장 →
-      </Link>
+      </button>
     </div>
   </Card>
 );

@@ -23,11 +23,11 @@ const MyMeetingsBar: React.FC<MyMeetingsBarProps> = ({ meetings, onAddMeeting, o
         <div key={meeting.id} className="inline-flex flex-col items-center">
           <MeetingCircleButton
             workoutType={meeting.workoutType as '조깅' | '자전거' | '헬스'}
-            isActive={meeting.isActive}
+            isWorkingOut={meeting.isWorkingOut}
             variant="my"
             onClick={() => onMeetingClick?.(meeting)}
           />
-          <span className={`max-w-[75px] truncate font-semibold text-xs mt-1 ${meeting.isActive ? 'text-brand-main' : 'text-gray-500'}`}>{meeting.name}</span>
+          <span className={`max-w-[75px] truncate font-semibold text-xs mt-1 ${meeting.isWorkingOut ? 'text-brand-main' : 'text-gray-500'}`}>{meeting.name}</span>
         </div>
       );
     })}
