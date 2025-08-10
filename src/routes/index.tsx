@@ -13,6 +13,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
   const navigate = useNavigate();
   return (
     <Routes>
+      {/* 인증 관련 */}
       <Route
         path="/login"
         element={
@@ -24,6 +25,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
         }
       />
 
+      {/* 메인 페이지 */}
       <Route
         path="/"
         element={
@@ -37,11 +39,12 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
         }
       />
 
+      {/* 모임 관련 */}
       <Route
-        path="/meetings"
+        path="/meetings/:id"
         element={
           isAuthenticated ? (
-            <PageLayout title="모임">
+            <PageLayout title="모임 상세 화면">
               <MeetingPage />
             </PageLayout>
           ) : (
@@ -51,52 +54,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
       />
 
       <Route
-        path="/meeting/:id"
-        element={
-          isAuthenticated ? (
-            <PageLayout title="모임 상세">
-              <div className="px-4 py-4">
-                <p className="text-gray-600">모임 상세 페이지 (개발 중)</p>
-              </div>
-            </PageLayout>
-          ) : (
-            <Navigate to="/login" replace />
-          )
-        }
-      />
-
-      <Route
-        path="/challenges"
-        element={
-          isAuthenticated ? (
-            <PageLayout title="챌린지">
-              <div className="px-4 py-4">
-                <p className="text-gray-600">챌린지 목록 페이지 (개발 중)</p>
-              </div>
-            </PageLayout>
-          ) : (
-            <Navigate to="/login" replace />
-          )
-        }
-      />
-
-      <Route
-        path="/profile"
-        element={
-          isAuthenticated ? (
-            <PageLayout title="프로필">
-              <div className="px-4 py-4">
-                <p className="text-gray-600">프로필 페이지 (개발 중)</p>
-              </div>
-            </PageLayout>
-          ) : (
-            <Navigate to="/login" replace />
-          )
-        }
-      />
-
-      <Route
-        path="/create-meeting"
+        path="/meetings/create"
         element={
           isAuthenticated ? (
             <PageLayout title="모임 만들기">
@@ -110,6 +68,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ isAuthenticated }) => {
         }
       />
 
+      {/* 404 페이지 */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

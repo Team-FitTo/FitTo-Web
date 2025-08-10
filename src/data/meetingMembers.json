@@ -1,0 +1,74 @@
+[
+  {
+    "memberId": "1",
+    "nickname": "김철수",
+    "todayWorkoutTime": 1800,
+    "isWorkingOut": true
+  },
+  {
+    "memberId": "2",
+    "nickname": "이영희",
+    "todayWorkoutTime": 2700,
+    "isWorkingOut": false
+  },
+  {
+    "memberId": "3",
+    "nickname": "박민수",
+    "todayWorkoutTime": 3600,
+    "isWorkingOut": true
+  },
+  {
+    "memberId": "4",
+    "nickname": "최지영",
+    "todayWorkoutTime": 900,
+    "isWorkingOut": false
+  },
+  {
+    "memberId": "5",
+    "nickname": "정현우",
+    "todayWorkoutTime": 4500,
+    "isWorkingOut": true
+  },
+  {
+    "memberId": "1",
+    "nickname": "김철수",
+    "todayWorkoutTime": 1800,
+    "isWorkingOut": true
+  },
+  {
+    "memberId": "2",
+    "nickname": "이영희",
+    "todayWorkoutTime": 2700,
+    "isWorkingOut": false
+  },
+  {
+    "memberId": "3",
+    "nickname": "박민수",
+    "todayWorkoutTime": 3600,
+    "isWorkingOut": true
+  },
+  {
+    "memberId": "4",
+    "nickname": "최지영최지영최지영최지영최지영최지영최지영최지영최지영최지영",
+    "todayWorkoutTime": 900,
+    "isWorkingOut": false
+  },
+  {
+    "memberId": "2",
+    "nickname": "이영희",
+    "todayWorkoutTime": 2700,
+    "isWorkingOut": false
+  },
+  {
+    "memberId": "3",
+    "nickname": "박민수",
+    "todayWorkoutTime": 3600,
+    "isWorkingOut": true
+  },
+  {
+    "memberId": "4",
+    "nickname": "최지영최지영최지영최지영최지영최지영최지영최지영최지영최지영",
+    "todayWorkoutTime": 900,
+    "isWorkingOut": false
+  }
+]

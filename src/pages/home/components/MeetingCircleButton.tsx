@@ -5,7 +5,7 @@ import BicycleIcon from '../../../assets/Bicycle.svg';
 
 interface MeetingCircleButtonProps {
   workoutType: '조깅' | '자전거' | '헬스';
-  isActive?: boolean;
+  isWorkingOut?: boolean;
   variant: 'my' | 'other';
   onClick?: () => void;
   className?: string;
@@ -13,12 +13,12 @@ interface MeetingCircleButtonProps {
 
 const MeetingCircleButton: React.FC<MeetingCircleButtonProps> = ({
   workoutType,
-  isActive = false,
+  isWorkingOut = false,
   variant,
   onClick,
   className = '',
 }) => {
-  const borderColor = isActive ? 'border-brand-main' : 'border-status-inactive';
+  const borderColor = isWorkingOut ? 'border-brand-main' : 'border-status-inactive';
   const outerClass =
     variant === 'my'
       ? `w-[55px] h-[55px] border-[3px]`

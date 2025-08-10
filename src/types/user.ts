@@ -1,16 +1,14 @@
+import type { Meeting } from './meeting';
+
 export interface User {
   id: string;
-  name: string;
-  email?: string;
-  profileImage?: string;
-  createdAt: Date;
+  myMeeting: Meeting[];
 }
 
-export interface UserProfile {
+export interface Member {
   id: string;
-  name: string;
-  profileImage?: string;
-  totalWorkoutTime: number;
-  todayWorkoutTime: number;
+  nickname: string;
+  totalWorkoutTime?: number;
+  todayWorkoutTime?: number;
   isWorkingOut: boolean;
 }
