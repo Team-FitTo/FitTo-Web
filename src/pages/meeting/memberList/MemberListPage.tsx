@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import type { MeetingMember } from '../../types/meeting';
-import meetingMembersData from '../../data/meetingMembers.json';
+import type { MeetingMember } from '../../../types/meeting';
+import meetingMembersData from '../../../data/meetingMembers.json';
 
 // 아이콘 imports
-import RunningActive from '../../assets/Running_active.svg';
-import RunningInactive from '../../assets/Running_inactive.svg';
-import CyclingActive from '../../assets/Cycling_active.svg';
-import CyclingInactive from '../../assets/Cycling_inactive.svg';
-import BarbellActive from '../../assets/Barbell_active.svg';
-import BarbellInactive from '../../assets/Barbell_inactive.svg';
+import RunningActive from '../../../assets/Running_active.svg';
+import RunningInactive from '../../../assets/Running_inactive.svg';
+import CyclingActive from '../../../assets/Cycling_active.svg';
+import CyclingInactive from '../../../assets/Cycling_inactive.svg';
+import BarbellActive from '../../../assets/Barbell_active.svg';
+import BarbellInactive from '../../../assets/Barbell_inactive.svg';
 
 interface MemberListPageProps {
   workoutType: string;

@@ -25,13 +25,9 @@ export interface MeetingDetail {
 }
 
 export interface WorkoutRecord {
-  id: string;
-  userId: string;
-  workoutType: string;
+  date: string; // YYYY-MM-DD 형식
+  memberId: string;
   workoutTime: number;
-  recorded_at: Date;
-  startTime: Date;
-  endTime: Date;
 }
 
 export interface MeetingMember {
@@ -39,4 +35,21 @@ export interface MeetingMember {
   nickname: string;
   todayWorkoutTime: number;
   isWorkingOut: boolean;
+}
+
+export interface CalendarData {
+  year: number;
+  month: number;
+  workoutRecords: WorkoutRecord[];
+  members: MeetingMember[];
+}
+
+export interface CalendarDayData {
+  date: number;
+  workoutColors: string[];
+}
+
+export interface MemberColor {
+  color: string;
+  nickname: string;
 }

@@ -1,0 +1,30 @@
+[
+  {
+    "date": 1,
+    "workoutColors": ["#EF4444", "#3B82F6", "#EAB308"]
+  },
+  {
+    "date": 3,
+    "workoutColors": ["#1E40AF", "#22C55E"]
+  },
+  {
+    "date": 7,
+    "workoutColors": ["#22C55E", "#EAB308", "#1E40AF"]
+  },
+  {
+    "date": 9,
+    "workoutColors": ["#1E40AF"]
+  },
+  {
+    "date": 14,
+    "workoutColors": ["#EAB308"]
+  },
+  {
+    "date": 17,
+    "workoutColors": ["#3B82F6", "#22C55E", "#EF4444"]
+  },
+  {
+    "date": 29,
+    "workoutColors": ["#3B82F6", "#16A34A", "#EAB308", "#8B5CF6", "#EC4899", "#F97316", "#EF4444", "#1E40AF", "#22C55E", "#7C3AED"]
+  }
+]

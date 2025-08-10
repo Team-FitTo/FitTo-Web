@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MeetingTimer from './components/MeetingTimer';
-import MemberListPage from './MemberListPage';
-import CalendarPage from './CalendarPage';
+import MemberListPage from './memberList/MemberListPage';
+import CalendarPage from './calendar/CalendarPage';
 import ChallengePage from './ChallengePage';
 import RankingPage from './RankingPage';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -31,8 +31,8 @@ const MeetingPage: React.FC = () => {
         // 현재는 모의 데이터 사용
         const mockMeetingInfo: MeetingDetail = {
           id: '1',
-          name: '헬스 모임',
-          workoutType: '헬스',
+          name: '조깅 모임',
+          workoutType: '조깅',
           description: '매일 아침 조깅하는 모임입니다.',
           maxMembers: 10,
           memberCount: 5,
